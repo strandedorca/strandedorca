@@ -1,0 +1,43 @@
+:root {
+	--white: #eeeeee;
+	--black: #373737;
+}
+*, *::before, *::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	/* background: url(../media/bg373737.svg) no-repeat;  */
+	color: var(--white);
+	font-size: 1.0rem;
+	font-family: 'Roboto Mono', monospace;
+    font-weight: 100;
+	line-height: 1.5;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    display: inline-block;
+}
+
+.hero {
+	width: 100vw;
+	height: 100vh;
+	background: url(../media/bg373737.svg) no-repeat top;
+	background-size: cover;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 2.0rem;
+}
+
