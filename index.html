@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="CSS/stylesheets.css">
 </head>
 <body>
-    <div class="flex menu">
+    <div class="flex header">
         <div>
+            <p class="logo">Noah</p>
             <!-- <img src="" alt="logo" id="logo"> -->
         </div>
-        <div class="flex">
-            <nav>
+        <div>
+            <nav class="flex">
                 <a href="index.html">Home</a>
                 <a href="about.html">About Me</a>
                 <a href="blog.html">Blog</a>
@@ -30,5 +31,48 @@
         </div>
     </div>
 
+    <div class="about-me flex">
+        <img class="avatar" src="media/avatar.png" alt="My pixel avatar">
+        <div class="about-me-text">
+            <h2>Hello, my name is Noah!</h2> 
+            <p>Based in Hanoi, Vietnam.</p>
+            <p>Current focuses: self-care, programming & instruments.</p>
+        </div>
+    </div>
+
+    <div class="blog">
+        <h2 class="articles">Articles</h2>
+        <div class="article-list">
+            <ul>
+                <li><a href="#">My productive morning routine starts at 10AM</a></li>
+                <li><a href="#">Dermatillomania</a></li>
+                <li><a href="#">Maybe it's not your fault</a></li>
+                <li><a href="#">Is being aesthetic just a waste of time?</a></li>
+                <li><a href="#">A beginner guide to Git & Github</a></li>
+                <li><a href="#">My aim training journey</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="subscription">
+        <div class="container flex">
+            <div class="quote">
+                <h2 class="quote-heading">Quote of the day</h2>
+                <blockquote>Make my messes matter. Make this chaos count.</blockquote>
+            </div>
+            <div>
+                <h2>Interested?</h2>
+                <p>Enter your email address below to sign up for my free newsletter. Your information is protected and I do not spam.</p>
+                <form action="#" method="POST" class="flex subscription-form">
+                    <input class="email-input" type="email" name="email-address" aria-label="Email Address" placeholder="Your Email Address" required>
+                    <button class="email-button">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        
+    </div>
 </body>
 </html>

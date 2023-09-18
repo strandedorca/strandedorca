@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Croissant+One&family=Montserrat:wght@100;300;400;700&display=swap');
+
 :root {
 	--white: #eeeeee;
 	--black: #373737;
+	--orange: #af4423;
+	--grey: #9191a1;
 }
+
 *, *::before, *::after {
 	box-sizing: border-box;
 	padding: 0;
@@ -10,34 +15,57 @@
 
 html {
 	scroll-behavior: smooth;
+	font-size: 16px;
 }
 
 body {
-	color: var(--white);
+	color: var(--black);
 	font-size: 1.0rem;
-	font-family: 'Roboto Mono', monospace;
-    font-weight: 100;
+	/* font-family: 'Roboto Mono', monospace; */
+	font-family: 'Montserrat', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	line-height: 1.5;
+	background-color: var(--white);
 }
 
 .flex {
     display: flex;
 }
 
-.menu {
+.header {
+	position: fixed;
+	z-index: 999;
+	width: 100%;
 	justify-content: space-between;
+	align-items: center;
+	padding: 0 40px;
+	background-color: rgba(238, 238, 238, 0.8)
+}
+
+.logo {
+	color: var(--black);
+	font-size: 1.5rem;
+	font-family: "Croissant One", Georgia, Times, 'Times New Roman', serif;
 }
 
 nav a {
     display: inline-block;
+	color: var(--black);
+	font-size: 1rem;
+}
+
+a {
+	text-decoration: none;
+}
+
+nav {
+	gap: 20px;
 }
 
 .hero {
-	width: 100vw;
+	position: relative;
+	width: 100%;
 	height: 100vh;
 	text-align: center;
-	font-size: 3rem;
-	margin-top: -50px;
 } 
 
 .hero-text::before {
@@ -49,14 +77,20 @@ nav a {
 	width: 100%;
 	height: 100%;
 	background: url(../media/bg373737.png) no-repeat;
-	background-color: var(--white);
-	background-size: cover;
+	/* background-color: var(--white); */
+	background-size: 100%;
+}
+
+h1 {
+	font-size: 4rem;
+	font-family: "Croissant One", Georgia, Times, 'Times New Roman', serif;
 }
 
 .hero-text {
 	position: relative;
 	width: 100%;
-	height: 100%;
+	height: 100%;    /* need to find a way to make it responsive */
+
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
@@ -64,7 +98,7 @@ nav a {
 	color: transparent;
 	background: url(../media/bg373737-white.png) no-repeat;
 	background-color: var(--black);
-	background-size: cover;
+	background-size: 100%;
 	-webkit-background-clip: text;
 	background-clip: text;
 }
@@ -74,4 +108,141 @@ nav a {
 	width: 50%;
 }
 
-/* filter: invert(99%) sepia(0%) saturate(7478%) hue-rotate(192deg) brightness(120%) contrast(87%); */
+.about-me {
+	align-items: center;
+	justify-content: space-around;
+	padding: 50px 170px 160px 150px;
+	margin-top: -100px;
+}
+
+.about-me h2 {
+	color: var(--orange);
+	font-size: 2rem;
+	/* font-weight: 700;
+	font-family: 'Cormorant Garamond', Georgia, Times, 'Times New Roman', serif;  */
+	border-bottom: 2px solid var(--orange);
+	/* display: inline-block; */
+	padding-bottom: 5px;
+	margin-bottom: 15px;
+}
+
+.about-me-text {
+	position: relative;
+	top: -50px;
+}
+
+.avatar {
+	height: 300px;
+}
+
+.blog::before {
+	content: '';
+	position: absolute;
+	top: -179px;
+	z-index: -1;
+	height: 100%;
+	width: 100%;
+	background: url(../media/divider.svg) no-repeat;
+	background-size: contain;
+}
+
+.blog {
+	position: relative;
+	color: var(--white);
+	width: 100%;
+}
+
+.blog a {
+	color: var(--white)
+}
+
+.article-list {
+	background-color: var(--black);
+	width: 100%;
+	padding: 30px 200px;
+}
+
+.article-list li {
+	font-size: 1.2rem;
+	font-weight: 500; 
+	padding: 20px 0;
+	display: block;
+	list-style-type: none;
+	border-top: 2px solid var(--white);
+	border-top: 2px solid var(--white);
+}
+
+.articles {
+	text-align: center;
+}
+
+.subscription {
+	background-color: var(--black);
+	padding: 50px 200px 100px 200px;
+}
+
+.container {
+	background-color: var(--white);
+	padding: 50px;
+	gap: 80px;
+	border-radius: 10px;
+}
+
+.quote-heading {
+	font-family: 'Cormorant Garamond', Georgia, Times, 'Times New Roman', serif; 
+	font-size: 2rem;
+}
+
+blockquote {
+	margin-top: 20px;
+	border-left: 2px grey solid;
+	font-family: "Cormorant Garamond", Georgia, Times, 'Times New Roman', serif;
+	font-size: 1.1rem;
+	font-weight: 600;
+	padding-left: 15px;
+}
+
+blockquote::before {
+	color: grey;
+ 	content: open-quote;
+  	font-size: 3rem;
+  	line-height: 0.5;
+  	margin-right: 10px;
+  	vertical-align: -15px;
+}
+
+blockquote::after {
+	color: grey;
+ 	content: close-quote;
+	font-size: 3rem;
+	line-height: 0.5;
+	margin-left: 10px;
+	vertical-align: -15px;
+}
+
+.email-input {
+	padding: 13px;
+	border: none;
+	border-radius: 30px;
+	position: absolute;
+	width: 100%;
+}
+
+.email-button {
+	right: 0;
+	padding: 13px 20px;
+	position: absolute;
+	border: none;
+	background-color: var(--orange);
+	border-radius: 30px;
+	color: var(--white);
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.8px;
+}
+
+.subscription-form {
+	width: 90%;
+	margin-top: 10px;
+	position: relative;
+}
